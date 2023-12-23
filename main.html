@@ -1,0 +1,53 @@
+<!-- Ndertoni skriptin qe te afishoje ne rend zbrites numrin e diteve deri ne daten 23 Dhjetor
+ kur merren pushimet e fundvitit. Psh. Te afishohet: ....Duhen edhe 3 dite....duhen edhe 2 dite....
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <h1>Kliko Butonin</h1>
+       <input type="submit" value="Click" class="button" onclick="daysUntil()">
+    </div>
+    <script>
+        function daysUntil() {
+        
+        var current_date, newYears_day;  
+  
+   
+  var one_day_ms = 1000 * 60 * 60 * 24;  
+
+  
+  current_date = new Date();  
+
+  
+  newYears_day= new Date(current_date.getFullYear(), 11, 31);  
+
+  
+  if (current_date.getMonth() == 11 && current_date.getDate() > 31)  
+  {  
+       newYear_day.setFullYear(newYears_day.getFullYear() + 1);   
+  }  
+
+  
+  var res = Math.round(newYears_day.getTime() - current_date.getTime()) / (one_day_ms);           
+
+  //remove the decimal point from the calculated result  
+  var FinalResult = res.toFixed (0);  
+
+
+  alert("Numri i ditëve të mbetura deri në  Vitin të Ri është : " +   
+                    +  FinalResult + " dite");
+
+                 
+        
+}
+
+    </script>
+</body>
+</html>
